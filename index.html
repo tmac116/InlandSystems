@@ -215,7 +215,14 @@
       transition: var(--transition);
     }
     .problem-card:hover { border-color: #e53e3e; transform: translateY(-2px); }
-    .problem-icon { font-size: 2.4rem; margin-bottom: 16px; }
+    .problem-icon {
+      font-size: 1.1rem; margin-bottom: 16px;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #FEE2E2; color: #DC2626;
+      display: flex; align-items: center; justify-content: center;
+      margin-left: auto; margin-right: auto;
+      font-weight: 700;
+    }
     .problem-card h3 { font-size: 1.15rem; color: var(--text-dark); margin-bottom: 10px; }
     .problem-card p { color: var(--text-dark-m); font-size: .9rem; line-height: 1.7; }
 
@@ -301,7 +308,13 @@
       transition: var(--transition);
     }
     .industry-card:hover { border-color: var(--accent); background: rgba(78,205,196,.04); transform: translateY(-2px); }
-    .industry-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .industry-icon {
+      font-size: .85rem; flex-shrink: 0;
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(78,205,196,.1); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-family: 'Fraunces', serif;
+    }
     .industry-card h4 { font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 2px; }
     .industry-card p { font-size: .85rem; color: var(--text-dark-m); }
 
@@ -579,17 +592,17 @@
       <h2 class="section-title" style="color: var(--text-dark);">You're Losing Money Every Day Without Knowing It</h2>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">&#128561;</div>
+          <div class="problem-icon">&times;</div>
           <h3>Leads Are Slipping Away</h3>
           <p>Someone fills out your form or calls your number &mdash; but you don't get back to them for hours. By then, they've already called your competitor.</p>
         </div>
         <div class="problem-card">
-          <div class="problem-icon">&#128172;</div>
+          <div class="problem-icon">&times;</div>
           <h3>Follow-Up Is a Mess</h3>
           <p>Sticky notes, text threads, maybe a spreadsheet. No system means no consistency &mdash; and inconsistency means lost revenue.</p>
         </div>
         <div class="problem-card">
-          <div class="problem-icon">&#128181;</div>
+          <div class="problem-icon">&times;</div>
           <h3>You're Leaving Money on the Table</h3>
           <p>Past customers who'd hire you again. Referrals that never got a thank-you. Estimates that never got a follow-up. It adds up fast.</p>
         </div>
@@ -605,19 +618,19 @@
       <p class="section-subtitle">Not generic software. Custom tools built around how your business actually runs &mdash; designed to generate leads, speed up your response time, and grow your revenue.</p>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">&#127760;</div>
+          <div class="service-icon">&target;</div>
           <h3>Lead Generation Websites</h3>
           <p>Websites built to rank on Google and convert visitors into calls, form fills, and booked jobs. Not a pretty brochure &mdash; a lead machine that works 24/7 while you sleep.</p>
           <div class="service-result">Result: More leads in your inbox every week</div>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#9889;</div>
+          <div class="service-icon">&raquo;</div>
           <h3>Automated Follow-Up Systems</h3>
           <p>Instant text and email responses when a lead comes in. Automated follow-up sequences that keep you top of mind. Never lose a lead to slow response time again.</p>
           <div class="service-result">Result: Respond in seconds, not hours</div>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128200;</div>
+          <div class="service-icon">&equiv;</div>
           <h3>Custom Business Tools</h3>
           <p>CRMs, quoting tools, dashboards, and customer portals built around your workflow. Track every lead, every job, every dollar &mdash; and know exactly where your money is coming from.</p>
           <div class="service-result">Result: Full visibility into your pipeline</div>
@@ -634,42 +647,42 @@
       <p class="section-subtitle">If your business depends on getting the phone to ring and closing jobs, I can help you get more of both.</p>
       <div class="industries-grid">
         <div class="industry-card">
-          <span class="industry-icon">&#128736;</span>
+          <span class="industry-icon">01</span>
           <div>
             <h4>Contractors &amp; Trades</h4>
             <p>More bids, faster follow-up, booked calendars</p>
           </div>
         </div>
         <div class="industry-card">
-          <span class="industry-icon">&#127968;</span>
+          <span class="industry-icon">02</span>
           <div>
             <h4>Real Estate</h4>
             <p>Capture every lead, nurture until they're ready</p>
           </div>
         </div>
         <div class="industry-card">
-          <span class="industry-icon">&#129657;</span>
+          <span class="industry-icon">03</span>
           <div>
             <h4>Health &amp; Wellness</h4>
             <p>Fill your schedule with automated booking</p>
           </div>
         </div>
         <div class="industry-card">
-          <span class="industry-icon">&#127860;</span>
+          <span class="industry-icon">04</span>
           <div>
             <h4>Restaurants &amp; Food</h4>
             <p>Online ordering, reviews, repeat customers</p>
           </div>
         </div>
         <div class="industry-card">
-          <span class="industry-icon">&#128295;</span>
+          <span class="industry-icon">05</span>
           <div>
             <h4>Home Services</h4>
             <p>Dominate local search, book more jobs</p>
           </div>
         </div>
         <div class="industry-card">
-          <span class="industry-icon">&#128722;</span>
+          <span class="industry-icon">06</span>
           <div>
             <h4>Any Local Business</h4>
             <p>If you need more customers, I can help</p>
@@ -739,11 +752,11 @@
           <h2>Ready to Stop Losing Leads?</h2>
           <p>Tell me about your business and where you're struggling. I'll come back with a concrete plan to get you more leads and help you close more deals. No fluff, no pressure.</p>
           <div class="contact-detail">
-            <div class="contact-detail-icon">&#9993;</div>
+            <div class="contact-detail-icon">@</div>
             <span>tanner@inlandnorthwestai.com</span>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">&#128205;</div>
+            <div class="contact-detail-icon">&bull;</div>
             <span>Spokane &amp; the Inland Northwest</span>
           </div>
         </div>
