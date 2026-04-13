@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Inland Systems | Smart Technology Solutions for Local Businesses</title>
-  <meta name="description" content="Custom apps, lead generation websites, and technology consulting for small businesses in Spokane, Liberty Lake, Coeur d'Alene & the Inland Northwest." />
-  <meta name="keywords" content="technology solutions Spokane, business automation, lead generation websites, custom apps small business, Inland Northwest technology" />
+  <title>Inland Systems | More Leads, Better Communication, More Revenue</title>
+  <meta name="description" content="Get more leads, follow up faster, and close more deals. Custom lead generation systems, automated follow-ups, and business tools for Spokane & the Inland Northwest." />
+  <meta name="keywords" content="lead generation Spokane, get more customers, business automation, follow up system, more leads small business, Inland Northwest" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.inlandnorthwestai.com/" />
 
-  <meta property="og:title" content="Inland Systems | Smart Technology for Local Businesses" />
-  <meta property="og:description" content="Custom apps, lead generation sites, and tech consulting for small businesses in the Inland Northwest." />
+  <meta property="og:title" content="Inland Systems | More Leads. Better Follow-Up. More Revenue." />
+  <meta property="og:description" content="Custom lead generation systems and automated follow-ups for small businesses in the Inland Northwest." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -168,6 +168,57 @@
       pointer-events: none;
     }
 
+    /* ============ STATS BAR ============ */
+    .stats-bar {
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'Fraunces', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      color: var(--text-muted);
+      font-size: .95rem;
+    }
+
+    /* ============ PROBLEM ============ */
+    .problem {
+      padding: 100px 0;
+      background: var(--white);
+      color: var(--text-dark);
+    }
+    .problem .section-label { color: var(--accent); }
+    .problem .section-title { color: var(--text-dark); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 56px;
+    }
+    .problem-card {
+      padding: 32px 24px;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      transition: var(--transition);
+    }
+    .problem-card:hover { border-color: #e53e3e; transform: translateY(-2px); }
+    .problem-icon { font-size: 2.4rem; margin-bottom: 16px; }
+    .problem-card h3 { font-size: 1.15rem; color: var(--text-dark); margin-bottom: 10px; }
+    .problem-card p { color: var(--text-dark-m); font-size: .9rem; line-height: 1.7; }
+
     /* ============ SERVICES ============ */
     .services {
       padding: 100px 0;
@@ -185,7 +236,7 @@
     .section-subtitle {
       color: var(--text-muted);
       font-size: 1.05rem;
-      max-width: 560px;
+      max-width: 600px;
       margin-bottom: 56px;
     }
     .services-grid {
@@ -219,6 +270,14 @@
     }
     .service-card h3 { font-size: 1.25rem; color: var(--white); margin-bottom: 12px; }
     .service-card p { color: var(--text-muted); font-size: .95rem; line-height: 1.7; }
+    .service-result {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: .9rem;
+    }
 
     /* ============ WHO I HELP (LIGHT) ============ */
     .who-i-help {
@@ -309,6 +368,27 @@
     .step h3 { font-size: 1.2rem; color: var(--text-dark); margin-bottom: 8px; }
     .step p { color: var(--text-dark-m); font-size: .95rem; max-width: 280px; margin: 0 auto; }
 
+    /* ============ CTA BANNER ============ */
+    .cta-banner {
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy-light));
+      z-index: 0;
+    }
+    .cta-banner .container { position: relative; z-index: 1; }
+    .cta-banner h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .cta-banner p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
     /* ============ CONTACT ============ */
     .contact {
       padding: 100px 0;
@@ -386,16 +466,20 @@
     @media (max-width: 900px) {
       .services-grid,
       .industries-grid,
-      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .steps-grid,
+      .problem-grid { grid-template-columns: 1fr 1fr; }
       .steps-grid::before { display: none; }
       .about-grid,
       .contact-grid { grid-template-columns: 1fr; }
       .about-photo { max-width: 400px; }
+      .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
     }
     @media (max-width: 640px) {
       .services-grid,
       .industries-grid,
-      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid,
+      .problem-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; gap: 32px; }
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
       .mobile-menu {
@@ -429,14 +513,14 @@
   <nav class="nav" id="nav">
     <div class="container">
       <a href="#" class="nav-logo">
-        <img src="logo.png" alt="Inland Systems" />
+        <img src="logo.png?v=2" alt="Inland Systems" />
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#who-i-help">Who I Help</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Free Consultation</a>
+      <a href="#contact" class="nav-cta">Get More Leads</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -449,7 +533,7 @@
     <a href="#services" onclick="closeMobile()">Services</a>
     <a href="#who-i-help" onclick="closeMobile()">Who I Help</a>
     <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
-    <a href="#contact" onclick="closeMobile()">Free Consultation</a>
+    <a href="#contact" onclick="closeMobile()">Get More Leads</a>
   </div>
 
   <!-- HERO -->
@@ -457,12 +541,57 @@
     <div class="dot-grid" style="top:60px;right:5%;opacity:.5;"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">Serving the Inland Northwest</div>
-        <h1>Technology That Works For <em>Your</em> Business. Not Just Tech Companies.</h1>
-        <p>Custom software, lead-generating websites, and smart automation built for real businesses by someone who understands them. No jargon. No fluff. Just results.</p>
+        <div class="hero-badge">Spokane &amp; the Inland Northwest</div>
+        <h1>Get More Leads. Close More Deals. <em>Make More Money.</em></h1>
+        <p>Your competitors are getting found online, following up instantly, and closing while you're still checking voicemail. I build the systems that put you ahead &mdash; more leads in the door, faster follow-up, and fewer falling through the cracks.</p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn-primary">Get a Free Consultation <span>&rarr;</span></a>
-          <a href="#services" class="btn-secondary">See What I Build</a>
+          <a href="#contact" class="btn-primary">Start Getting More Leads <span>&rarr;</span></a>
+          <a href="#services" class="btn-secondary">See How It Works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number">78%</div>
+          <div class="stat-label">of leads go to the business that responds first</div>
+        </div>
+        <div>
+          <div class="stat-number">5 min</div>
+          <div class="stat-label">is all you have before a lead goes cold</div>
+        </div>
+        <div>
+          <div class="stat-number">50%</div>
+          <div class="stat-label">of sales go to the vendor that follows up first</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM SECTION -->
+  <section class="problem">
+    <div class="container">
+      <p class="section-label">Sound Familiar?</p>
+      <h2 class="section-title" style="color: var(--text-dark);">You're Losing Money Every Day Without Knowing It</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">&#128561;</div>
+          <h3>Leads Are Slipping Away</h3>
+          <p>Someone fills out your form or calls your number &mdash; but you don't get back to them for hours. By then, they've already called your competitor.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#128172;</div>
+          <h3>Follow-Up Is a Mess</h3>
+          <p>Sticky notes, text threads, maybe a spreadsheet. No system means no consistency &mdash; and inconsistency means lost revenue.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#128181;</div>
+          <h3>You're Leaving Money on the Table</h3>
+          <p>Past customers who'd hire you again. Referrals that never got a thank-you. Estimates that never got a follow-up. It adds up fast.</p>
         </div>
       </div>
     </div>
@@ -471,24 +600,27 @@
   <!-- SERVICES -->
   <section class="services" id="services">
     <div class="container">
-      <p class="section-label">Services</p>
-      <h2 class="section-title">What I Build</h2>
-      <p class="section-subtitle">Everything is custom-built around how your business actually works &mdash; not forced into a template.</p>
+      <p class="section-label">Solutions</p>
+      <h2 class="section-title">I Build Systems That Make You Money</h2>
+      <p class="section-subtitle">Not generic software. Custom tools built around how your business actually runs &mdash; designed to generate leads, speed up your response time, and grow your revenue.</p>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">&#9881;</div>
-          <h3>Custom Apps &amp; Automation</h3>
-          <p>Stop doing the same tasks over and over. I build tools that handle the repetitive work &mdash; scheduling, quoting, tracking, reporting &mdash; so you can focus on what matters.</p>
-        </div>
-        <div class="service-card">
           <div class="service-icon">&#127760;</div>
-          <h3>Lead Generation Sites</h3>
-          <p>Websites that actually bring in customers. Built for search engines, optimized for conversions, and designed to make your phone ring and your inbox fill up.</p>
+          <h3>Lead Generation Websites</h3>
+          <p>Websites built to rank on Google and convert visitors into calls, form fills, and booked jobs. Not a pretty brochure &mdash; a lead machine that works 24/7 while you sleep.</p>
+          <div class="service-result">Result: More leads in your inbox every week</div>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128161;</div>
-          <h3>Technology Consulting</h3>
-          <p>Not sure where to start? I'll look at how your business runs, find the bottlenecks, and recommend the right tech to solve real problems &mdash; not sell you things you don't need.</p>
+          <div class="service-icon">&#9889;</div>
+          <h3>Automated Follow-Up Systems</h3>
+          <p>Instant text and email responses when a lead comes in. Automated follow-up sequences that keep you top of mind. Never lose a lead to slow response time again.</p>
+          <div class="service-result">Result: Respond in seconds, not hours</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128200;</div>
+          <h3>Custom Business Tools</h3>
+          <p>CRMs, quoting tools, dashboards, and customer portals built around your workflow. Track every lead, every job, every dollar &mdash; and know exactly where your money is coming from.</p>
+          <div class="service-result">Result: Full visibility into your pipeline</div>
         </div>
       </div>
     </div>
@@ -498,49 +630,49 @@
   <section class="who-i-help" id="who-i-help">
     <div class="container">
       <p class="section-label">Who I Help</p>
-      <h2 class="section-title">Built for Local Businesses</h2>
-      <p class="section-subtitle">You don't need a Fortune 500 budget to get technology that works. I build for the businesses that make our communities run.</p>
+      <h2 class="section-title" style="color: var(--text-dark);">Built for Businesses That Run on Leads</h2>
+      <p class="section-subtitle">If your business depends on getting the phone to ring and closing jobs, I can help you get more of both.</p>
       <div class="industries-grid">
         <div class="industry-card">
           <span class="industry-icon">&#128736;</span>
           <div>
             <h4>Contractors &amp; Trades</h4>
-            <p>Automate bids, scheduling, and follow-ups</p>
-          </div>
-        </div>
-        <div class="industry-card">
-          <span class="industry-icon">&#127860;</span>
-          <div>
-            <h4>Restaurants &amp; Food Service</h4>
-            <p>Ordering systems, online presence, reviews</p>
+            <p>More bids, faster follow-up, booked calendars</p>
           </div>
         </div>
         <div class="industry-card">
           <span class="industry-icon">&#127968;</span>
           <div>
             <h4>Real Estate</h4>
-            <p>Lead capture, CRM tools, listing sites</p>
+            <p>Capture every lead, nurture until they're ready</p>
           </div>
         </div>
         <div class="industry-card">
           <span class="industry-icon">&#129657;</span>
           <div>
             <h4>Health &amp; Wellness</h4>
-            <p>Booking, patient intake, reminders</p>
+            <p>Fill your schedule with automated booking</p>
           </div>
         </div>
         <div class="industry-card">
-          <span class="industry-icon">&#128722;</span>
+          <span class="industry-icon">&#127860;</span>
           <div>
-            <h4>Retail &amp; E-Commerce</h4>
-            <p>Inventory, online stores, analytics</p>
+            <h4>Restaurants &amp; Food</h4>
+            <p>Online ordering, reviews, repeat customers</p>
           </div>
         </div>
         <div class="industry-card">
           <span class="industry-icon">&#128295;</span>
           <div>
-            <h4>Service Businesses</h4>
-            <p>Dispatch, invoicing, customer portals</p>
+            <h4>Home Services</h4>
+            <p>Dominate local search, book more jobs</p>
+          </div>
+        </div>
+        <div class="industry-card">
+          <span class="industry-icon">&#128722;</span>
+          <div>
+            <h4>Any Local Business</h4>
+            <p>If you need more customers, I can help</p>
           </div>
         </div>
       </div>
@@ -553,11 +685,11 @@
       <div class="about-grid">
         <div class="about-photo">[ Your photo here ]</div>
         <div class="about-content">
-          <p class="section-label">About</p>
-          <h2>Hey, I'm Tanner.</h2>
-          <p>I'm not from a big tech company or a corporate consulting firm. I'm a local business owner myself &mdash; I run a construction company right here in the Inland Northwest.</p>
-          <p>That means I understand what it's like to wear every hat, chase down leads, and wish you had better tools. <strong>I build the technology I wish I had when I started.</strong></p>
-          <p>Every solution I create is practical, straightforward, and built to actually get used &mdash; not sit on a shelf. If it doesn't make your life easier, I haven't done my job.</p>
+          <p class="section-label">Why Me</p>
+          <h2>I'm Not a Tech Bro. I'm a Business Owner.</h2>
+          <p>I run a construction company right here in the Inland Northwest. I know what it's like to chase leads, send quotes that never get answered, and wonder where your next job is coming from.</p>
+          <p><strong>So I built systems to fix it.</strong> Automated follow-ups that close deals while I'm on a job site. Lead gen sites that bring in calls every week. A CRM that actually makes sense for how I work.</p>
+          <p>Now I build those same systems for other local businesses. <strong>If it doesn't make you more money, I haven't done my job.</strong></p>
         </div>
       </div>
     </div>
@@ -567,25 +699,34 @@
   <section class="how-it-works" id="how-it-works">
     <div class="container">
       <p class="section-label">Process</p>
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-subtitle">Simple, transparent, no surprises. Here's what working together looks like.</p>
+      <h2 class="section-title" style="color: var(--text-dark);">From First Call to More Revenue</h2>
+      <p class="section-subtitle">No long contracts. No confusing jargon. Just a simple path to getting more leads and closing more deals.</p>
       <div class="steps-grid">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>We Talk</h3>
-          <p>Free consultation. I learn about your business, your pain points, and what's eating up your time.</p>
+          <h3>Free Strategy Call</h3>
+          <p>We look at where your leads are coming from (and where they're leaking) and map out a plan to fix it.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>I Build</h3>
-          <p>Custom solution designed around your workflow. You see progress along the way &mdash; no black box.</p>
+          <h3>I Build Your System</h3>
+          <p>Custom lead gen site, automated follow-up, CRM &mdash; whatever your business needs to start capturing and converting more leads.</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>You Grow</h3>
-          <p>Launch, iterate, and scale. I stick around to make sure everything keeps running smoothly.</p>
+          <h3>You Make More Money</h3>
+          <p>More leads, faster response, better close rates. I stick around to optimize and make sure the numbers keep going up.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Every Day Without a System, You're Losing Leads.</h2>
+      <p>Let's fix that. The consultation is free, the ROI is real.</p>
+      <a href="#contact" class="btn-primary">Get My Free Strategy Call <span>&rarr;</span></a>
     </div>
   </section>
 
@@ -594,9 +735,9 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <p class="section-label">Get Started</p>
-          <h2>Let's Build Something That Works.</h2>
-          <p>Tell me a little about your business and what's slowing you down. No commitment, no pressure &mdash; just a conversation about what's possible.</p>
+          <p class="section-label">Let's Go</p>
+          <h2>Ready to Stop Losing Leads?</h2>
+          <p>Tell me about your business and where you're struggling. I'll come back with a concrete plan to get you more leads and help you close more deals. No fluff, no pressure.</p>
           <div class="contact-detail">
             <div class="contact-detail-icon">&#9993;</div>
             <span>tanner@inlandnorthwestai.com</span>
@@ -608,7 +749,7 @@
         </div>
         <form class="contact-form" id="contactForm">
           <input type="hidden" name="access_key" value="52d55bb1-cc3d-4bcf-bb30-392dfbaae11d" />
-          <input type="hidden" name="subject" value="New Inland Systems Inquiry" />
+          <input type="hidden" name="subject" value="New Inland Systems Lead" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
@@ -624,24 +765,25 @@
             <input type="email" id="email" name="email" placeholder="you@example.com" required />
           </div>
           <div class="form-group">
-            <label for="service">What are you interested in?</label>
+            <label for="service">What do you need most?</label>
             <select id="service" name="service">
-              <option value="">Select a service...</option>
-              <option value="apps">Custom Apps & Automation</option>
-              <option value="leadgen">Lead Generation Website</option>
-              <option value="consulting">Technology Consulting</option>
-              <option value="not-sure">Not sure yet</option>
+              <option value="">Pick one...</option>
+              <option value="more-leads">I need more leads</option>
+              <option value="follow-up">I need better follow-up</option>
+              <option value="website">I need a website that converts</option>
+              <option value="crm">I need to track my pipeline</option>
+              <option value="all">All of the above</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">What's your biggest challenge right now?</label>
-            <textarea id="message" name="message" placeholder="Tell me about what's slowing your business down..."></textarea>
+            <label for="message">What's costing you the most right now?</label>
+            <textarea id="message" name="message" placeholder="Missed calls? Slow follow-up? No online presence? Tell me what's hurting..."></textarea>
           </div>
-          <button type="submit" class="btn-submit">Send Message</button>
+          <button type="submit" class="btn-submit">Get My Free Strategy Call</button>
         </form>
         <div class="form-success" id="formSuccess">
-          <h3>Message Sent!</h3>
-          <p>I'll get back to you within 24 hours. Looking forward to learning about your business.</p>
+          <h3>You're In!</h3>
+          <p>I'll review your info and get back to you within 24 hours with a game plan. Talk soon.</p>
         </div>
       </div>
     </div>
@@ -676,7 +818,7 @@
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = 'Sending…';
+      btn.textContent = 'Sending\u2026';
 
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
